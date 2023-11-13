@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "pnpm prisma generate && next dev",
+    "dev": "next dev",
     "build": "pnpm prisma generate && next build",
     "start": "next start",
     "migrate:dev": "pnpm prisma generate dev --name init",
@@ -16,16 +16,22 @@
     "generate:api": "orval --config ./orval.config.js"
   },
   "dependencies": {
+    "@clerk/nextjs": "^4.27.1",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-progress": "^1.0.3",
     "@radix-ui/react-slot": "^1.0.2",
+    "@radix-ui/react-toast": "^1.1.5",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "lucide-react": "^0.292.0",
     "next": "14.0.2",
+    "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
     "shadcn-ui": "^0.4.1",
     "tailwind-merge": "^2.0.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zustand": "^4.4.6"
   },
   "devDependencies": {
     "@types/node": "^20",
