@@ -1,20 +1,21 @@
-"use client";
+'use client'
 
-import { UserButton, useUser } from "@clerk/nextjs";
-import { cn } from "@/lib/utils";
-import { useSidebarStore } from "@/stores/sidebar-store";
-import { Progress } from "@/components/ui/progress";
-import SidebarToggle from "./SidebarToggle";
-import { MAX_FREE_COUNTS } from "@/constants";
-import Navbar from "./Navbar";
-import SubscriptionButton from "@/components/elements/SubscriptionButton";
-import ThemeToggle from "@/components/elements/ThemeToggle";
-import Logo from "../Logo";
+import { UserButton, useUser } from '@clerk/nextjs'
+
+import { cn } from '@/lib/utils'
+import { useSidebarStore } from '@/stores/sidebar-store'
+import { Progress } from '@/components/ui/progress'
+import { MAX_FREE_COUNTS } from '@/constants'
+import SidebarToggle from './SidebarToggle'
+import Logo from '@/components/elements/Logo'
+import SubscriptionButton from '@/components/elements/SubscriptionButton'
+import ThemeToggle from '@/components/elements/ThemeToggle'
+import Navbar from './Navbar'
 
 export interface SidebarProps {
-  className?: string;
-  isProPlan?: boolean;
-  userLimitCount: number;
+  className?: string
+  isProPlan?: boolean
+  userLimitCount: number
 }
 
 const Sidebar: React.FC<SidebarProps> = ({
@@ -22,11 +23,11 @@ const Sidebar: React.FC<SidebarProps> = ({
   isProPlan,
   userLimitCount,
 }) => {
-  const { isMinimal } = useSidebarStore();
-  const { user } = useUser();
+  const { isMinimal } = useSidebarStore()
+  const { user } = useUser()
 
   return (
-    <div className={cn("text-white", className)}>
+    <div className={cn('text-white', className)}>
       <div className="h-20 pl-7 pr-6">
         <div className="flex items-center justify-between w-full">
           {!isMinimal && <Logo />}
@@ -38,9 +39,9 @@ const Sidebar: React.FC<SidebarProps> = ({
       </div>
       <div
         className={cn(
-          "fixed bottom-8 left-4 right-4",
-          "lg:left-7 lg:right-auto",
-          isMinimal && "lg:left-3"
+          'fixed bottom-8 left-4 right-4',
+          'lg:left-7 lg:right-auto',
+          isMinimal && 'lg:left-3',
         )}
       >
         <div className="mb-4 p-4 rounded-lg bg-gray-900">
@@ -73,7 +74,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         <ThemeToggle />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Sidebar;
+export default Sidebar

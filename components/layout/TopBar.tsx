@@ -1,12 +1,12 @@
 'use client';
 import { cn } from '@/lib/utils'
 import React from 'react'
-import Logo from "./Logo";
+import Logo from "../elements/Logo";
 import { Button } from '../ui/button'
 import { Menu } from 'lucide-react'
 import { useSidebarStore } from '@/stores/sidebar-store'
 
-const TopBar = () => {
+const Topbar = () => {
   const { handleOpenOrClose } = useSidebarStore();
   return (
     <div
@@ -23,4 +23,4 @@ const TopBar = () => {
   );
 }
 
-export default TopBar
+export default Topbar
