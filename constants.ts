@@ -55,5 +55,6 @@ export const NAVIGATION = [
     icon: "/icons/dashboard.svg",
     url: "/dashboard",
     slug: "dashboard"
-  }
+  },
+  ...TOOLS
 ];

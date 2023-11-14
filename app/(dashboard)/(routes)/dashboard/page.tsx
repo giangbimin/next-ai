@@ -1,5 +1,9 @@
+import ToolsNavigation from "@/components/dashboard/ToolsNavigation";
+
 export default function DashboardPage() {
   return (
-    <div>DashboardPage</div>
-  )
+    <div>
+    <ToolsNavigation/>
+    </div>
+  );
 }

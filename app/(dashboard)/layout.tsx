@@ -1,7 +1,7 @@
 import UpgradeProModal from '@/components/dashboard/UpgradeProModal'
 import Sidebar from '@/components/layout/Sidebar'
 import MobileSidebar from '@/components/layout/Sidebar/MobileSidebar'
-import Topbar from '@/components/layout/TopBar'
+import Topbar from '@/components/layout/Topbar'
 import { cn } from '@/lib/utils'
 
 const DashboardLayout = async (props: { children: React.ReactNode }) => {
